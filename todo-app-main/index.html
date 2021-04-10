@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="css/todo.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.google.com/specimen/Josefin+Sans">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body class="contain-desk-dark bgcolors">
+ <div class="container-fluid vh-100">
+    <div class="row todo-desk-dark d-flex justify-content-center" id="tophead">
+      <div class="col-lg-5 offset-lg-1 pl-lg-0 col-10">
+        <div class="row">
+          <div class="col-12 p-0 pl-3 header">
+             <h1 class="text-light pt-5 mt-3 pb-4 pl-0 text-left">TODO</h1>
+             <img src="images/icon-sun.svg" class="changemode" id="sun">
+             <img src="images/icon-moon.svg" class="changemode d-none" id="moon">
+          </div>
+        </div> 
+        <div class="row mb-5 ml-1"> 
+            <div class="col-12 p-0 todo-list-items form-check">
+              <img src="images/icon-check.svg" class="d-none tick">
+              <input type="checkbox" name="done" class="form-check-input d-inline check-desk-dark">
+              <input type="text" name="todoname" class="bgcolors-desk-dark bgcolors">
+            </div>
+        </div>
+        <div class="row ml-1 addlist"> 
+            <div class="col-12 todo-list bgcolors bgcolors-desk-dark">
+                <div class="row text-center">
+                  <div class="col-lg-3 col-6 d-flex justify-content-start" >
+                    <p class="p-0 m-0 count"></p>
+                  </div>
+                  <div class="col-5 d-lg-inline d-none">
+                    <span class="m-1 menuitems menu-dark-hover all" id="all">All</span>
+                    <span class="m-1 menuitems menu-dark-hover active" id="active">Active</span>
+                    <span class="m-1 menuitems menu-dark-hover complete" id="complete">Completed</span>
+                  </div>
+                  <div class="col-lg-4 col-6 d-flex justify-content-end">
+                    <p class="p-0 m-0 menuitems menu-dark-hover" id="clear">Clear Completed</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12 mt-3 d-inline d-lg-none todo-list bgcolors bgcolors-desk-dark text-center">
+                    <span class="m-1 menuitems menu-dark-hover all" id="all">All</span>
+                    <span class="m-1 menuitems menu-dark-hover active" id="active">Active</span>
+                    <span class="m-1 menuitems menu-dark-hover complete" id="complete">Completed</span>
+            </div>
+        </div>
+      </div>
+    </div>
+</div> 
+<script src="jquery-3.5.1.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
+
+

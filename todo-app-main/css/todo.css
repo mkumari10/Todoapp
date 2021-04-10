@@ -1,0 +1,155 @@
+/* @import url('https://fonts.google.com/specimen/Josefin+Sans'); 
+:root{
+    --c-background: #f9f9f9;
+} */
+
+
+
+.contain-desk-dark{
+/* 	background-color: var(--c-background); */
+	font-family: sans-serif;
+	font-size: 18px;
+	background-color: hsl(235, 21%, 11%);
+}
+
+.contain-desk-light{
+	font-family: sans-serif;
+	font-size: 18px;
+	background-color:hsl(236, 33%, 92%);
+}
+
+.todo-desk-dark{
+	background-image: url("../images/bg-desktop-dark.jpg");
+	background-repeat: no-repeat;
+}
+
+.todo-desk-light{
+	background-image: url("../images/bg-desktop-light.jpg");
+	background-repeat: no-repeat;
+}
+
+.header h1{
+	letter-spacing: 10px;
+	display: inline-block;
+	font-weight: 700;
+	position: relative;
+}
+
+.changemode{
+	position: absolute;
+    top: 74px;
+    right: 0px;
+}
+
+input[type="text"]{
+  outline: none !important;
+  padding:0px 56px;
+  width: inherit;
+  height: 3em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  border-style: none;
+  border-radius: 3px;
+}
+
+.bgcolors-desk-dark{
+    border-bottom: 1px solid hsl(233, 14%, 35%) !important;
+	  background-color: hsl(235, 24%, 19%);
+    color:  hsl(236, 33%, 92%);
+}
+
+.bgcolors-desk-light{
+	border-bottom: 1px solid hsl(234, 39%, 85%) !important;
+	background-color: #f8f9fa;
+  color: black;
+}
+
+input[type="checkbox"]{
+    outline: none;
+    appearance: none;
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 40px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+/*     border: 2px solid hsl(237, 14%, 26%); */
+    background-color: transparent;
+}
+
+.check-desk-light{
+	 border: 2px solid hsl(234, 39%, 85%);
+}
+
+.check-desk-dark{
+	border: 2px solid hsl(237, 14%, 26%);
+}
+
+.itemleft:hover{
+   border: 2px solid hsl(234, 39%, 85%);
+   cursor: pointer;
+}
+
+.itemleft:checked{
+    border: 0px;
+	background-image: linear-gradient(to bottom right,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+
+.tick{
+	position: absolute;
+	top: 22px;
+    left: 27px;
+    z-index: 1;
+	background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.todo-list{
+    font-size: 15px;
+    padding: 13px 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(233, 14%, 35%);
+    font-weight: 800;
+}
+
+.menuitems{
+  color: hsl(235, 19%, 35%);
+  cursor: pointer;
+}
+
+.menu-dark-hover:hover{
+	color:  hsl(236, 33%, 92%) !important;
+} 
+
+.menu-light-hover:hover{
+  color:  black !important;
+}
+
+
+.changemode{
+   cursor: pointer;
+}
+
+.help{
+ font-size: 12px;
+ color: hsl(233, 14%, 35%);
+ font-weight: 700;
+}
+
+.addlist{
+/*  background-color: hsl(235, 24%, 19%); */
+ border-radius: 7px;
+}
+
+.crossed{
+    position: absolute;
+    right: 18px;
+    top: 19px;
+    display: none;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
