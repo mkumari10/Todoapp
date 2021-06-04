@@ -2,9 +2,7 @@ $('document').ready(function($) {
  
      let i=0, arrlist=[],completed=[],spreaded = [],active=[]; 
      $('.count').html(`${i} items left`);
-     $('.all').css('color','hsl(220, 98%, 61%)');
-
-      
+     $('.Firstall').css('color','hsl(220, 98%, 61%)');
 
   //checked the todo list item
 	$(document).on('click','.itemleft',function(e){
@@ -26,7 +24,6 @@ $('document').ready(function($) {
               }
               i--;
               $('.count').html(`${i} items left`);
-              // completed.push($(this).siblings('input[type="text"]').val());
               completed.push($(this).parent('div'));
 
        }
@@ -59,7 +56,7 @@ $('document').ready(function($) {
         var keycode = (e.keycode ? e.keycode : e.which);
         if(keycode == '13'){
         	i++;
-        	var todolist = $(this).parent("div").clone(true);
+         let	todolist = $(this).parent("div").clone(true);
           arrlist.push(todolist);
             $(todolist).children('input[type="text"]').attr('disabled','true').addClass('check-dark');
             $(todolist).children('input[type="checkbox"]').addClass('itemleft');
@@ -117,26 +114,27 @@ $('document').ready(function($) {
 
 
 	//mode change
-	$('.changemode').on('click',function(e){
+	// $('.changemode').on('click',function(e){
+ //        if($(this).attr('id') === "sun"){
+ //        	$(this).addClass('d-none');
+ //        	$('#moon').removeClass('d-none');
+ //        	$('#tophead').removeClass('todo-desk-dark').addClass('todo-desk-light');
+ //        	$('.bgcolors').removeClass('contain-desk-dark bgcolors-desk-dark').addClass('contain-desk-light bgcolors-desk-light');
+ //          $('input[type="checkbox"]').removeClass('check-desk-dark').addClass('check-desk-light');
+ //          $('.menuitems').removeClass('menu-dark-hover').addClass('menu-light-hover');
+ //          $('.addeditems').children('input[type="text"]').removeClass('check-dark').addClass('check-light');
+          
+ //        }else{
+ //        	$(this).addClass('d-none');
+ //        	$('#sun').removeClass('d-none');
+ //        	$('#tophead').removeClass('todo-desk-light').addClass('todo-desk-dark');
+ //        	$('.bgcolors').removeClass('contain-desk-light bgcolors-desk-light').addClass('contain-desk-dark bgcolors-desk-dark');
+ //          $('input[type="checkbox"]').removeClass('check-desk-light').addClass('check-desk-dark');
+ //          $('.menuitems').removeClass('menu-light-hover').addClass('menu-dark-hover');
+ //          $('.addeditems').children('input[type="text"]').removeClass('check-light').addClass('check-dark');
 
-        if($(this).attr('id') === "sun"){
-        	$(this).addClass('d-none');
-        	$('#moon').removeClass('d-none');
-        	$('#tophead').removeClass('todo-desk-dark').addClass('todo-desk-light');
-        	$('.bgcolors').removeClass('contain-desk-dark bgcolors-desk-dark').addClass('contain-desk-light bgcolors-desk-light');
-          $('input[type="checkbox"]').removeClass('check-desk-dark').addClass('check-desk-light');
-          $('.menuitems').removeClass('menu-dark-hover').addClass('menu-light-hover');
-          $('.addeditems').children('input[type="text"]').removeClass('check-dark').addClass('check-light');
-        }else{
-        	$(this).addClass('d-none');
-        	$('#sun').removeClass('d-none');
-        	$('#tophead').removeClass('todo-desk-light').addClass('todo-desk-dark');
-        	$('.bgcolors').removeClass('contain-desk-light bgcolors-desk-light').addClass('contain-desk-dark bgcolors-desk-dark');
-          $('input[type="checkbox"]').removeClass('check-desk-light').addClass('check-desk-dark');
-          $('.menuitems').removeClass('menu-light-hover').addClass('menu-dark-hover');
-          $('.addeditems').children('input[type="text"]').removeClass('check-light').addClass('check-dark');
-        }
-	});
+ //        }
+	// });
 
   function taskfind(){
           let removecomm = (a,b) => {
@@ -151,7 +149,7 @@ $('document').ready(function($) {
  }
 
   //Show completed task
-  $(".complete").on('click',function(e){
+  $(".Firstcomplete").on('click',function(e){
       let showcompleted = taskfind();
       arrlist.forEach((el)=>{
          $(el).hide();
@@ -162,14 +160,14 @@ $('document').ready(function($) {
    });
 
    //Show all task
-    $(".all").on('click',function(e){
+    $(".Firstall").on('click',function(e){
       arrlist.forEach((el)=>{
          $(el).show();
       });
     });
 
     //Active tasks
-    $('.active').on('click',function(e){
+    $('.Firstactive').on('click',function(e){
       let showcompleted = taskfind();
       arrlist.forEach((el)=>{
          $(el).show();
